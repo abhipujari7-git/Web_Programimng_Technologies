@@ -1,0 +1,72 @@
+<html>
+<head>
+    <style>
+        table{
+            margin-left:300px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <table border="2" style="background-color: lightpink;" widht="auto">
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td>Empolyee Code </td>
+                <td><input type="text" name="Empolyee" id="name"></td>
+            </tr>
+            <tr>
+                <td>Department</td>
+                <td>
+                    <input type="radio" id="Admin" name="Department" value="Admin"><label for="Admin">Admin</label><br>
+                    <input type="radio" id="HR" name="Department" value="HR"><label for="HR">HR</label><br>
+                    <input type="radio" id="Technical" name="Department" value="Technical"><label
+                        for="Technical">Technical</label><br>
+                    <input type="radio" id="Accounts" name="Department" value="Accounts"><label
+                        for="Accounts">Accounts</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td>Date of Joining:</td>
+                <td> <input type="day" name="day" id="day" size="1">/
+                    <input type="month." name="month" id="month" size="1">/
+                    <input type="year" name="year" id="year" size="1">
+                    <pre><label>dd </label>  <label>  mm </label> <label>   yyyy </label> </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><textarea name="Addr" id="Addr"></textarea></td>
+            </tr>
+            <tr>
+                <td>Training Programs Attended</td>
+                <td>
+                    <input type="checkbox" name="1" id="aaa" value="HTML/DHTML"><label for="HTML/DHTML">HTML/DHTML</label><br>
+                    <input type="checkbox" name="1" id="bbb" value="JAVA"><label for="JAVA">JAVA</label><br>
+                    <input type="checkbox" name="1" id="ccc" value="CLIENT/SERVER"><label for="CLIENT/SERVER">CLIENT/SERVER</label><br>
+                    <input type="checkbox" name="1" id="ddd" value=".NET"><label for=".NET">.NET</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td>Training Program need to atttend</td>
+                <td>
+                    <select name="Program" id="Program">
+                        <option value="test"> Select </option>
+                        <option value="JAVA"> JAVA </option>
+                        <option value="JAVAScript"> JAVA </option>
+                        <option value="React"> JAVA </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Send the information at:</td>
+                <td><a href="mailto:someone@example.com">someone@example.com</a></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

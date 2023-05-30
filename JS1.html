@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <script>
+        function validatedata(numid) {
+            var a = document.getElementById(numid).value;
+            //alert(a)
+            //to check whether a is blank or a string
+            if (a === "" || isNaN(a)) {
+
+                return false
+            }
+            return true;
+
+
+        }
+
+        function validatenumbers(x, y, z) {
+            //retrieve data from the textbox
+            var flag = validatedata(x)
+            var flag1 = validatedata(y)
+            var flag2 = validatedata(z)
+            //alert(flag+" "+flag1)
+            if (flag && flag1 && flag2) {
+                // alert("data is valid");
+                gtnumber();
+            }
+            else {
+                // alert("data is invalid")
+            }
+        }
+        function gtnumber() {
+            var a = parseInt(document.getElementById('n1').value);
+            var b = parseInt(document.getElementById('n2').value);
+            var c = parseInt(document.getElementById('n3').value);
+            // var ans=a+b;
+            var d = 0;
+            if (a > b && a > c) {
+                d = a;
+            } if (b > a && b > c) {
+                d = b;
+            }
+            else {
+                d = c;
+            }
+            //document.write("Addition : "+ans);
+            document.getElementById("mydiv").innerHTML = "Greatest : " + d;
+            document.getElementById("result").value = d;
+        }
+    </script>
+</head>
+
+<body>
+
+    <form name="frm">
+        Number 1: <input type="text" name="num1" id="n1"><br>
+        Number 2: <input type="text" name="num2" id="n2"><br>
+        Number 3: <input type="text" name="num3" id="n3"><br>
+        result: <input type="text" name="result" id="result" disabled><br>
+        <button type="button" name="add" id="add" value="add" onclick="validatenumbers('n1','n2','n3')">Find
+            Greatest</button>
+    </form>
+    <div id="mydiv"> </div>
+</body>
+
+</html>

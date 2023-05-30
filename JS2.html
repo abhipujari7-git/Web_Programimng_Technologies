@@ -1,0 +1,27 @@
+<html>
+
+<head>
+  <script>
+    function gtnumber(s, m) {
+      var a = parseInt(document.getElementById(s).value);
+      while (a > 0) {
+        document.getElementById("mydiv").innerHTML += m.value + "<br>";
+        a--;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <form name="frm">
+    Number 1: <input type="text" name="num1" id="n1" /><br />
+    Message : <input type="text" name="msg" id="m1" /><br>
+    <!-- result: <input type="text" name="result" id="result" disabled /><br /> -->
+    <button type="button" name="add" id="add" value="add" onclick="gtnumber('n1',m1)">
+      Print Message
+    </button>
+  </form>
+  <div id="mydiv"></div>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <script>
+
+        function validatenumber(numid) {
+            var a = document.getElementById(numid).value;
+            var lenght
+            if ((a === "" || isNaN(a))  ) {
+                alert("data is not numeric")
+                return false
+            }
+
+            return true;
+
+        }
+
+        function validatedata() {
+            var flag1 = validatenumber("num1")
+
+            if (flag1 && flag2) {
+                //alert("data is valid");
+                findSum();
+            }
+
+
+        }
+        function findSum() {
+            alert("fundSum")
+            var num = parseInt(document.getElementById("num1").value);
+            var ans=0 ;
+            var r=0;
+            while (num) {
+
+                r = num % 10;
+                ans = ans+ r;
+                num = Math.floor(num / 10);
+
+            }
+
+            document.getElementById("mydiv").innerHTML = "Result:   " + ans;
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Operations on numbers</h3>
+    <br />
+    <form>
+        Enter number :<input type="text" name="num1" id="num1" minlength="5" maxlength="5" /><br /><br />
+
+   
+
+        <button type="button" name="perform" id="perform" value="perform" onclick="findSum()">
+            Perform
+        </button>
+    </form>
+    <div id="mydiv"> </div>
+</body>
+
+</html>

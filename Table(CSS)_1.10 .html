@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: rgb(60, 112, 152);
+           
+        }
+
+        .my {
+           text-align-last: right ;
+        }
+
+        tr {
+            
+            color: aliceblue;
+            
+        }
+        legend{
+            color: aliceblue;
+        }
+      
+
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        fieldset{
+            border-color:  white;
+            margin: 10%;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body background="skyblue">
+    <fieldset>
+        <legend>  Registration details</legend>
+
+        <table class="center" cellspacing="20px">
+            <tr>
+                <td  class="my"> University : </td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td class="my"> Institute : </td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td class="my"> Branch : </td>
+                <td><select name="Branch" id=" Branch ">
+                        <option value="test">---Select One---</option>
+                        <option value="Mech">Mech</option>
+                        <option value="CSE">CSE</option>
+                        <option value="Civil">Civil</option>
+                        <option value="Elect">Elect</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td class="my"> Degree : </td>
+                <td><select name="Degree" id="Degree">
+                        <option value="test">--Select One--</option>
+                        <option value="B.TECH">B.TECH</option>
+                        <option value="B.E">B.E</option>
+                        <option value="MCA">MCA</option>
+                    </select> <input type="radio" id="Pursuing" name="Degree" value="Pursuing"><label
+                        for="Pursuing">Pursuing</label>
+                    <input type="radio" id="Completed" name="Degree" value="Completed"><label
+                        for="Completed">Completed</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="my">Average CPI :</td>
+                <td> <input type="number" name="CPI" min="0" max="10"> upto
+                    <input type="number" name="Sem" min="1" max="8"> th Semester
+                </td>
+            </tr>
+            <tr>
+                <td class="my" >Experience :</td>
+                <td> <input type="number" min="2" max="10" name="" id=""></td>
+            </tr>
+            <tr>
+                <td class="my" >Your Website Or Vlog :</td>
+                <td><input type="text" placeholder="http//"></td>
+            </tr>
+        </table>
+    </fieldset>
+
+</body>
+
+</html>
