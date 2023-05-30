@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <script>
+
+        var validateName = () => {
+            var nm = document.getElementById("nm").value
+            if ((nm === "") || (nm.trim().length === 0)) {
+                document.getElementById("errname").innerHTML = "name cant be spaces and blank"
+                return false;
+            }
+            document.getElementById("errname").innerHTML = ""
+            return true;
+        }
+        var validateDegree = ()=>{
+            var arr = document.getElementById("degree")
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i].checked) {
+                    data = arr[i].value
+                    document.getElementById("errDegree").innerHTML = ""
+                    return true;
+                }
+            }
+            document.getElementById("errDegree").innerHTML = "Select one degree"
+            return false;
+        }
+        var validateData = () => {
+            var flag1 = validateName();
+            var flag2 = validateDegree();
+
+            if (flag1 && flag2) {
+                var str = "name :" + nm + "<br> degree :" + data;
+                document.getElementById("mydiv").innerHTML = str;
+
+            }
+            else {
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    name : <input type="text" name="nm" id="nm"><span name="errname" id="errname">
+    </span> <br>
+    degree : <input type="radio" name="degree" id="BE" value="BE">
+    <label for="BE">BE</label>
+    <input type="radio" name="degree" id="BTECH" value="BTECH">
+    <label for="BTECH">BTECH</label>
+    <input type="radio" name="degree" id="MTECH" value="MTECH">
+    <label for="MTECH">MTECH</label> <span id="errDegree">
+
+        <span id="errDegree"></span>
+        <button type="button" name="btn" id="btn" value="btn" onclick="validateData()">Show Data</button>
+        <div id="mydiv">
+
+        </div>
+</body>
+
+</html>
